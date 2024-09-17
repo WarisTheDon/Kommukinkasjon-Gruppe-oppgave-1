@@ -1,0 +1,14 @@
+
+
+function knappeclick () {
+
+    onclick (
+
+        getElementById("")
+        
+        );
+
+
+}
+
+
