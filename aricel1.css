@@ -3,7 +3,7 @@
 body, html {
     margin: 0;
     padding: 0;
-    height: 200vh; /* Making the page scrollable */
+    height: 200vh; 
     font-family: Arial, sans-serif;
 }
 
@@ -160,14 +160,14 @@ margin: 0;
 }
 
 #BackTekst a {
-    width: 70vw;               /* Sett bredden på a-elementet */
-    display: block;            /* Gjør at a-elementet tar opp hele bredden av forelderen */
-    text-align: center;        /* Juster tekst til sentrum */
-    color: black;              /* Sett tekstfarge */
-    font-size: 30px;           /* Sett skriftstørrelse */
-    margin: 0;                 /* Fjern marginer */
+    width: 70vw;              
+    display: block;            
+    text-align: center;       
+    color: black;              
+    font-size: 30px;          
+    margin: 0;                 
     padding: 0;  
-    text-align: left;              /* Fjern padding */
+    text-align: left;              
 }
 
 #InnledningB {

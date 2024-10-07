@@ -7,11 +7,11 @@ html, body{
 
 
 
-/* Baseline styles for sections */
+
 section {
-    width: 95%; /* Make sections responsive */
+    width: 95%; 
     max-width: 1200px;
-    margin: 20px auto; /* Center align */
+    margin: 20px auto; 
     padding: 20px;
     text-align: center;
     transition: all 0.5s ease;
@@ -20,7 +20,7 @@ section {
 .content-border, .content-border2, .content-border3, .content-border4 {
     padding: 20px;
     background-color: #ffffffbe;
-    width: 90%; /* Make sections responsive */
+    width: 90%; 
     max-width:1000px;
     margin: 20px auto;
     box-sizing: border-box;
@@ -63,27 +63,27 @@ section {
 
 
 
-/* Adjust heading margins for responsiveness */
+
 .content-border h2, .content-border2 h2, .content-border3 h2, .content-border4 h2 {
-    margin: 20px 0; /* Reduce margin */
-    font-size: 2em; /* Responsive font size */
+    margin: 20px 0;
+    font-size: 2em;
 }
 
 .content-border p, .content-border2 p, .content-border3 p, .content-border4 p {
-    font-size: 1.2em; /* Responsive font size */
-    line-height: 1.5; /* Improve readability */
+    font-size: 1.2em; 
+    line-height: 1.5; 
 }
 
-/* Responsive button styles */
+
 .ContentB, .ContentB2, .ContentB3, .ContentB4 {
-    margin: 20px auto; /* Center buttons */
-    padding: 10px 20px; /* Responsive padding */
+    margin: 20px auto;
+    padding: 10px 20px;
     border-radius: 4%;
     background-color: #f4511e;
     color: white;
     text-align: center;
     cursor: pointer;
-    display: inline-block; /* Keep buttons inline */
+    display: inline-block;
 }
 
 .ContentB:hover, .ContentB2:hover, .ContentB3:hover, .ContentB4:hover {
@@ -94,7 +94,7 @@ section {
 }
 
 .messi-section {
-    height: auto; /* Adjust height for content */
+    height: auto; 
     padding: 20px;
     font-size: 6vw;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
@@ -113,15 +113,15 @@ section {
 
 
 
-/* Ensure media is responsive */
+
 img, video {
-    max-width: 100%; /* Responsive width */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; 
+    height: auto; 
 }
 
-/* Media Queries for Responsiveness */
+
 @media (max-width: 1024px) {
-    /* Tablet adjustments */
+    
     section {
         padding: 15px;
     }
@@ -140,7 +140,7 @@ img, video {
 }
 
 @media (max-width: 768px) {
-    /* Mobile adjustments */
+   
     section {
         padding: 10px;
     }
@@ -156,7 +156,7 @@ img, video {
         box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3), 
                     0px 12px 24px rgba(0, 0, 0, 0.2);
         text-align: left;
-        overflow: hidden; /* Ensure no content spills out */
+        overflow: hidden; 
     }
 
     .ContentB, .ContentB2, .ContentB3, .ContentB4 {
@@ -173,7 +173,7 @@ img, video {
 }
 
 @media (max-width: 480px) {
-    /* Small Mobile adjustments */
+ 
     header {
         padding: 5px;
     }
