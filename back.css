@@ -28,17 +28,19 @@ section {
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3), 
                 0px 12px 24px rgba(0, 0, 0, 0.2);
     text-align: left;
+    overflow: hidden;
+    background-color: transparent;
 }
 
 #header1{
     position: relative;
     display: flex;
    text-align: center;
-   background-color: rgba(146, 124, 124, 0.336);
+   
    
   
   
-   justify-content: center;
+   justify-content: center; 
   
   
   
@@ -96,10 +98,21 @@ section {
 .messi-section {
     height: auto; 
     padding: 20px;
-    font-size: 6vw;
+
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     text-align: center;
+   perspective: 1px;
     
+}
+
+.messi-section h1 {
+    
+  
+    font-size: 7vw;
+  
+    
+    transition: transform 0.5s ease;
+ 
 }
 
 
@@ -112,12 +125,99 @@ section {
 }
 
 
+.unwrap-image{
+
+    width: 0;
+    height: auto;
+    transition: width 1s ease;
+
+}
+
+
 
 
 img, video {
     max-width: 100%; 
     height: auto; 
 }
+
+
+
+
+
+
+
+
+
+#footerUno {
+    display: flex;
+   
+    align-items: center;
+   
+    width: 100vw;
+   
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.4);
+    
+    justify-content: space-evenly;
+}
+
+#footerUno h1 {
+    color: white;
+    font-size: 2vh;
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    letter-spacing: 0.1em;
+    transition: color 0.3s ease-in-out;
+
+   
+    
+}
+
+#footerUno h1:hover {
+    color: #f0cb7b; /* Endrer farge ved hover */
+}
+
+#footerUno ul {
+    display: flex;
+    gap: 20px; /* Avstand mellom elementene */
+    list-style: none;
+
+   
+}
+
+#footerUno li {
+    color: white;
+    font-size: 1.2vh;
+    cursor: pointer;
+    padding: 10px;
+ 
+    
+    transition: all 0.3s ease;
+  
+}
+
+#footerUno li:hover {
+    color: #f0cb7b;
+    box-shadow: 0px 5px 10px rgba(131, 189, 255, 0.7);
+    transform: translateY(-3px); /* Gir et lite løft når du hovrer */
+}
+
+#footerUno li::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #83bdff;
+    transition: width 0.3s ease-in-out;
+    width: 0;
+}
+
+#footerUno li:hover::before {
+    width: 100%; /* Understreker elementet ved hover */
+}
+
+
 
 
 @media (max-width: 1024px) {
