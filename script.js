@@ -22,5 +22,6 @@ var bannerFarger = "#003366";
 
 document.getElementById("header1").style.backgroundColor = bannerFarger; 
 document.getElementById("footerUno").style.backgroundColor = bannerFarger; 
+document.getElementById("headettekst").style.backgroundColor = bannerFarger; 
 
 
