@@ -24,7 +24,7 @@ section {
 .content-border, .content-border2, .content-border3, .content-border4 {
     padding: 20px;
     background-color: #ffffffbe;
-    width: 90%; 
+    width: 28%; 
     max-width:1000px;
     margin: 20px auto;
     box-sizing: border-box;
@@ -37,17 +37,28 @@ section {
 }
 
 #header1{
-    position: relative;
+   
     display: flex;
-   text-align: center;
    
    
+ 
   
   
-   justify-content: center; 
   
   
   
+
+}
+
+
+
+#header1 h1{
+
+  
+  
+    position: relative;
+  left: 46vw;
+    
 
 }
 
@@ -56,7 +67,7 @@ section {
 
     background-color: rgba(146, 124, 124, 0.336);
     
-    width: 100%;
+    width: 90%;
     justify-content: space-around;
     align-items: center;
     
@@ -304,3 +315,4 @@ img, video {
         font-size: 0.9em;
     }
 }
+

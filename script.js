@@ -17,11 +17,32 @@ window.addEventListener('scroll', function() {
 
 
 
-var bannerFarger = "#003366"; 
+
+let bannerFarger = 'linear-gradient(90deg, #002244, #003366, #0055AA, #0066CC)';
 
 
-document.getElementById("header1").style.backgroundColor = bannerFarger; 
-document.getElementById("footerUno").style.backgroundColor = bannerFarger; 
-document.getElementById("headettekst").style.backgroundColor = bannerFarger; 
+document.getElementById("header1").style.backgroundImage = bannerFarger; 
+document.getElementById("footerUno").style.backgroundImage = bannerFarger; 
+document.getElementById("headettekst").style.backgroundImage = bannerFarger;
+
+
+
+
+
+document.getElementById("header1").addEventListener('click', function() {
+    let bannerFarger = 'linear-gradient(90deg, #6699CC, #99BBEE, #AACCEE, #CCEEFF)';
+
+    document.getElementById("header1").style.backgroundImage = bannerFarger; 
+    document.getElementById("footerUno").style.backgroundImage = bannerFarger; 
+    document.getElementById("headettekst").style.backgroundImage = bannerFarger;
+});
+
+
+
+
+
+
+
+
 
 
