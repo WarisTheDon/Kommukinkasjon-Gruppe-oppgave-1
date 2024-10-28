@@ -1,12 +1,15 @@
 
 * {
     box-sizing: border-box;
+    
+    background: linear-gradient(to right, #f8f8f8, #c0c0c0),
 }
 
 
 html, body{ 
     padding: 0;
     margin: 0;
+    
 }
 
 
@@ -19,21 +22,38 @@ section {
     padding: 20px;
     text-align: center;
     transition: all 0.5s ease;
+
+    
+}
+
+.parallax {
+    height: 500px;
+    background-attachment: fixed;
+    background-image: url('Bilder/litemategt.png');
+    background-position: center;
+    background-repeat: no-repeat;
+
+    
 }
 
 .content-border, .content-border2, .content-border3, .content-border4 {
-    padding: 20px;
-    background-color: #ffffffbe;
-    width: 28%; 
-    max-width:1000px;
-    margin: 20px auto;
-    box-sizing: border-box;
-    border-radius: 2%;
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3), 
-                0px 12px 24px rgba(0, 0, 0, 0.2);
-    text-align: left;
-    overflow: hidden;
-    background-color: transparent;
+    position: relative;
+      padding: 100px;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(230, 230, 230, 0.9)),
+                  url('background-pattern.png');
+      background-size: cover, 400px 400px;
+      background-blend-mode: overlay;
+      width: 85%;
+      max-width: 1200px;
+      margin: 100px auto;
+      box-sizing: border-box;
+      border-radius: 40px;
+      box-shadow: rgba(0, 0, 0, 0.4) 0px 25px 75px, rgba(0, 0, 0, 0.3) 0px 15px 30px -5px;
+      text-align: center;
+      overflow: hidden;
+      background-color: #ffffff;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    
 }
 
 #header1{
@@ -41,26 +61,40 @@ section {
     display: flex;
    
    
- 
-  
+    align-items: center;
+    
   
   
   
   
 
 }
+
 
 
 
 #header1 h1{
 
-  
-  
-    position: relative;
+  position: relative;
   left: 46vw;
+  right: 50vw;
+  
     
 
 }
+
+
+
+
+
+#creds{
+
+
+    box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.5 ) ;
+     text-align: center;
+
+}
+
 
 
 #Family.nettside-footer{
@@ -84,12 +118,27 @@ section {
 .content-border h2, .content-border2 h2, .content-border3 h2, .content-border4 h2 {
     margin: 20px 0;
     font-size: 2em;
+    text-align: center;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Starter litt under sin opprinnelige posisjon for en subtil oppoveranimasjon */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .content-border p, .content-border2 p, .content-border3 p, .content-border4 p {
-    font-size: 1.2em; 
-    line-height: 1.5; 
+    font-size: 1.2em;
+    line-height: 1.5;
+    opacity: 0; /* Starter usynlig */
+    animation: fadeIn 1.5s ease-out 0.5s forwards; /* Fade-in-animasjon som starter etter 0.5 sek */
 }
+
 
 
 .ContentB, .ContentB2, .ContentB3, .ContentB4 {
@@ -120,24 +169,56 @@ section {
     
 }
 
+
+
 .messi-section h1 {
-    
-  
     font-size: 7vw;
-  
-    
+    background: linear-gradient(to right, #555555, #888888); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    position: relative; 
     transition: transform 0.5s ease;
- 
 }
 
-
-.content-border img{
-
+.messi-section h1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
     width: 100%;
-    border-radius: 5%;
-
-
+    height: 2px;
+    background: #888888; 
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
 }
+
+.messi-section h1:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+.content-border img {
+    display: block;
+    width: 50%;
+    height: 80%;
+    border-radius: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 80px;
+    box-shadow: rgba(0, 0, 0, 0.2) 5px 5px, rgba(0, 0, 0, 0.15) 10px 10px, rgba(0, 0, 0, 0.1) 15px 15px, rgba(0, 0, 0, 0.05) 20px 20px, rgba(0, 0, 0, 0.025) 25px 25px;
+    transition: transform 0.3s ease-in, box-shadow 0.3s ease-in;
+}
+
+.content-border img:hover {
+    transform: scale(1.001); /* Øk bildet med 5% */
+    box-shadow: rgba(32, 32, 32, 0.4) 5px 5px, rgba(36, 35, 35, 0.3) 10px 10px, rgba(0, 0, 0, 0.2) 15px 15px, rgba(0, 0, 0, 0.1) 20px 20px, rgba(0, 0, 0, 0.05) 25px 25px;
+}
+
+
 
 
 .unwrap-image{

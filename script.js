@@ -18,28 +18,12 @@ window.addEventListener('scroll', function() {
 
 
 
-let bannerFarger = 'linear-gradient(90deg, #002244, #003366, #0055AA, #0066CC)';
+let bannerFarger = 'linear-gradient(135deg, #dcdcdc, #bdbdbd)';
 
 
 document.getElementById("header1").style.backgroundImage = bannerFarger; 
 document.getElementById("footerUno").style.backgroundImage = bannerFarger; 
 document.getElementById("headettekst").style.backgroundImage = bannerFarger;
-
-
-
-
-
-document.getElementById("header1").addEventListener('click', function() {
-    let bannerFarger = 'linear-gradient(90deg, #6699CC, #99BBEE, #AACCEE, #CCEEFF)';
-
-    document.getElementById("header1").style.backgroundImage = bannerFarger; 
-    document.getElementById("footerUno").style.backgroundImage = bannerFarger; 
-    document.getElementById("headettekst").style.backgroundImage = bannerFarger;
-});
-
-
-
-
 
 
 
