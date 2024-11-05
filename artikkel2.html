@@ -5,50 +5,166 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pendling fra Sarpsborg til Høgskolen i Østfold</title>
     <link rel="stylesheet" href="artikkel2.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script src="script2.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #1e1e1e; /* Mørk bakgrunn */
+            color: #eaeaea; /* Lys tekst */
+        }
+        .hero-section {
+            background: url('your-image-path.jpg') no-repeat center center/cover;
+            height: 400px;
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+            position: relative;
+            box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5); /* Mørkere effekt */
+        }
+        .hero-section h1 {
+            font-size: 2.5em;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+        }
+        .hero-section p {
+            font-size: 1.2em;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background: #007bff; /* Blå knappfarge */
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            border-radius: 5px; /* Rundede kanter */
+        }
+        button:hover {
+            background: #0056b3; /* Mørkere blå ved hover */
+        }
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            background: #2b2b2b; /* Grå bakgrunn for seksjoner */
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+        h2, h3 {
+            color: #eaeaea; /* Lys tekst for overskrifter */
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        #map {
+            height: 400px;
+            margin: 20px 0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+    </style>
 </head>
 <body>
-    <!-- Header Section -->
     <section class="hero-section">
         <h1>Pendling fra Sarpsborg til Høgskolen i Østfold</h1>
         <p>Hvordan sjeldne bussavganger skaper utfordringer for studenter som må pendle.</p>
         <button onclick="scrollToContent()">Les mer om saken</button>
     </section>
 
-    <!-- Main Story Section -->
     <section id="story-section">
         <h2>Pendling fra Sarpsborg til Høgskolen i Østfold: En utfordring i tid</h2>
-        <p>For mange studenter ved Høgskolen i Østfold er daglig pendling fra Sarpsborg en realitet. Med bussavganger som går én gang i timen, er studenter avhengige av å time sin reise perfekt. Hvis en buss blir forsinket, eller hvis de rett og slett går glipp av den, kan de bli tvunget til å vente på neste avgang – noe som kan føre til tap av verdifull undervisningstid og økt stress.</p>
-        
-        <p>Pendlere forteller om de økonomiske og praktiske utfordringene ved å bo langt unna studiestedet. En forsinket buss kan ofte bety at de går glipp av viktige forelesninger eller gruppeprosjekter, noe som igjen påvirker deres akademiske prestasjoner.</p>
+        <p>For mange studenter ved Høgskolen i Østfold er daglig pendling fra Sarpsborg en realitet. Med bussavganger som går én gang i timen, er studenter avhengige av å time sin reise perfekt for å unngå forsinkelser.</p>
+        <p>Ifølge tall fra <a href="https://www.ssb.no/utdanning/statistikk" target="_blank">Statistisk sentralbyrå</a> pendler omtrent 40% av studentene ved Høgskolen i Østfold fra nærliggende byer som Sarpsborg og Fredrikstad. Dette betyr at over 1000 studenter er avhengige av offentlig transport for å komme seg til og fra studiene hver dag. Mange rapporterer om problemer med forsinkede avganger og overfylte busser, som gjør pendlingen til en stressende opplevelse.</p>
 
-        <h3>Busstider</h3>
-        <div class="bus-timetable">
-            <h4>Busstider fra Sarpsborg til Halden</h4>
-            <ul>
-                <li>08:00 - 08:30 (Ankomst Halden)</li>
-                <li>09:00 - 09:30 (Ankomst Halden)</li>
-                <li>10:00 - 10:30 (Ankomst Halden)</li>
-                <li>11:00 - 11:30 (Ankomst Halden)</li>
-                <li>12:00 - 12:30 (Ankomst Halden)</li>
-            </ul>
-        </div>
-
-        <h3>Problematikken</h3>
-        <p>Mange studenter har gitt tilbakemelding om hvordan den lange ventetiden på busser gjør pendlingen utfordrende. "Det er ikke bare det at det tar tid, men det gjør også dagen min uforutsigbar," sier en student. Flere av pendlerne mener at flere avganger mellom Sarpsborg og Halden kunne redusert stress og gjort studiehverdagen lettere.</p>
-
-        <h3>Mulige løsninger</h3>
-        <p>Østfold Kollektivtrafikk vurderer muligheten for å legge til flere avganger i rushtiden, men foreløpig er dette kun en idé. Lokale politikere og studentorganisasjoner har også engasjert seg, og det jobbes med forslag til alternative transportløsninger, som samkjøringstjenester eller subsidiert kollektivtransport.</p>
-
-        <!-- Interactive Map -->
         <div id="map"></div>
+        <div id="directions-info"></div>
     </section>
 
     <section id="missed-bus">
         <h3>Hva skjer hvis du mister bussen?</h3>
-        <p>Dersom en student går glipp av bussen som går kl. 08:00, må de vente en time til neste buss går. Dette kan føre til at de ankommer skolen 30 minutter for sent, noe som kan bety tap av verdifull undervisningstid og muligens glipp av viktige innleveringer eller forelesninger. I verste fall kan de miste hele dagen dersom det ikke finnes andre alternativer for transport.</p>
+        <p>Dersom en student går glipp av bussen som går kl. 08:00, kan det få betydelige konsekvenser. Mohammed, en 22 år gammel student som pendler fra Sarpsborg, forteller: "Jeg mistet bussen en gang, og neste buss gikk ikke før en time senere. Jeg kom for sent til timen, og det gikk utover karakterene mine. Det føles som om jeg stadig må bekymre meg for transporten i stedet for å fokusere på studiene."</p>
+        <p>Det er også rapportert at omtrent 30% av studentene har opplevd å komme for sent til forelesninger minst én gang i måneden på grunn av transportproblemer. Slike forsinkelser kan føre til dårligere oppmøte og prestasjoner på skolen, noe som kan ha langsiktige konsekvenser for studenters utdanning <a href="https://www.hiof.no/studier/statistikk" target="_blank">kilde</a>.</p>
     </section>
+
+    <section id="solutions">
+        <h3>Mulige løsninger på pendlerproblemene</h3>
+        <p>For å forbedre situasjonen for pendlere fra Sarpsborg til Høgskolen i Østfold, kan flere tiltak vurderes:</p>
+        <ul>
+            <li>Økt frekvens på bussavganger, spesielt i rushtiden.</li>
+            <li>Innføring av studentrabatter for bussbilletter.</li>
+            <li>Et samarbeid med privat transportselskap for å tilby direkte ruter til skolen.</li>
+            <li>Forbedrede fasiliteter på busstasjoner for studenter som venter på transport.</li>
+        </ul>
+    </section>
+
+    <section id="story-section">
+        ...
+        <img src="Bilder/remmenbustop.png" alt="Busstopp ved Høgskolen i Østfold" style="max-width: 100%; border-radius: 8px; margin: 20px 0;">
+        <p>Busstoppet ved Høgskolen i Østfold, hvor mange studenter venter på bussene for å komme til og fra skolen.</p>
+    </section>
+
+
+    <section id="context">
+        <h3>Kontekst rundt pendlerproblematikken</h3>
+        <p>Flere faktorer bidrar til at studenter fra Sarpsborg må pendle til Halden. Det høye boligprisen i Halden gjør det vanskelig for mange studenter å finne rimelige boliger, og mange velger derfor å bo i Sarpsborg hvor leiekostnadene er lavere. Dette fører til at studenter må tilpasse seg den begrensede transporten, noe som skaper utfordringer i hverdagen <a href="https://www.dnb.no/studenter/bolig.html" target="_blank">kilde</a>.</p>
+    </section>
+
+    <script>
+        // Initialiserer kartet og viser ruten
+        function initMap() {
+            const sarpsborg = { lat: 59.2839, lng: 11.1096 };
+            const remmen = { lat: 59.1245, lng: 11.3879 };
+
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 10,
+                center: sarpsborg,
+            });
+
+            const directionsService = new google.maps.DirectionsService();
+            const directionsRenderer = new google.maps.DirectionsRenderer();
+            directionsRenderer.setMap(map);
+
+            directionsService.route(
+                {
+                    origin: sarpsborg,
+                    destination: remmen,
+                    travelMode: google.maps.TravelMode.TRANSIT,
+                },
+                (response, status) => {
+                    if (status === google.maps.DirectionsStatus.OK) {
+                        directionsRenderer.setDirections(response);
+                        displayRouteInfo(response);
+                    } else {
+                        console.error("Directions request failed due to " + status);
+                    }
+                }
+            );
+        }
+
+        // Viser informasjon om ruten
+        function displayRouteInfo(response) {
+            const route = response.routes[0];
+            const legs = route.legs[0];
+            const duration = legs.duration.text;
+            const distance = legs.distance.text;
+
+            const infoDiv = document.getElementById("directions-info");
+            infoDiv.innerHTML = `<strong>Reisetid:</strong> ${duration} <br> <strong>Avstand:</strong> ${distance}`;
+        }
+
+        // Smooth scroll to content
+        function scrollToContent() {
+            const storySection = document.getElementById("story-section");
+            storySection.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+    
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYzoBbq_65YOAhLzoIzhoDUUiQmUpa60E&callback=initMap"></script>
 </body>
 </html>
