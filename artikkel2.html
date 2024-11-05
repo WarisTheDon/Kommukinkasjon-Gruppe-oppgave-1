@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendling fra Sarpsborg til Høgskolen i Østfold</title>
+    <link rel="stylesheet" href="artikkel2.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="script2.js" defer></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <section class="hero-section">
+        <h1>Pendling fra Sarpsborg til Høgskolen i Østfold</h1>
+        <p>Hvordan sjeldne bussavganger skaper utfordringer for studenter som må pendle.</p>
+        <button onclick="scrollToContent()">Les mer om saken</button>
+    </section>
+
+    <!-- Main Story Section -->
+    <section id="story-section">
+        <h2>Pendling fra Sarpsborg til Høgskolen i Østfold: En utfordring i tid</h2>
+        <p>For mange studenter ved Høgskolen i Østfold er daglig pendling fra Sarpsborg en realitet. Med bussavganger som går én gang i timen, er studenter avhengige av å time sin reise perfekt. Hvis en buss blir forsinket, eller hvis de rett og slett går glipp av den, kan de bli tvunget til å vente på neste avgang – noe som kan føre til tap av verdifull undervisningstid og økt stress.</p>
+        
+        <p>Pendlere forteller om de økonomiske og praktiske utfordringene ved å bo langt unna studiestedet. En forsinket buss kan ofte bety at de går glipp av viktige forelesninger eller gruppeprosjekter, noe som igjen påvirker deres akademiske prestasjoner.</p>
+
+        <h3>Busstider</h3>
+        <div class="bus-timetable">
+            <h4>Busstider fra Sarpsborg til Halden</h4>
+            <ul>
+                <li>08:00 - 08:30 (Ankomst Halden)</li>
+                <li>09:00 - 09:30 (Ankomst Halden)</li>
+                <li>10:00 - 10:30 (Ankomst Halden)</li>
+                <li>11:00 - 11:30 (Ankomst Halden)</li>
+                <li>12:00 - 12:30 (Ankomst Halden)</li>
+            </ul>
+        </div>
+
+        <h3>Problematikken</h3>
+        <p>Mange studenter har gitt tilbakemelding om hvordan den lange ventetiden på busser gjør pendlingen utfordrende. "Det er ikke bare det at det tar tid, men det gjør også dagen min uforutsigbar," sier en student. Flere av pendlerne mener at flere avganger mellom Sarpsborg og Halden kunne redusert stress og gjort studiehverdagen lettere.</p>
+
+        <h3>Mulige løsninger</h3>
+        <p>Østfold Kollektivtrafikk vurderer muligheten for å legge til flere avganger i rushtiden, men foreløpig er dette kun en idé. Lokale politikere og studentorganisasjoner har også engasjert seg, og det jobbes med forslag til alternative transportløsninger, som samkjøringstjenester eller subsidiert kollektivtransport.</p>
+
+        <!-- Interactive Map -->
+        <div id="map"></div>
+    </section>
+
+    <section id="missed-bus">
+        <h3>Hva skjer hvis du mister bussen?</h3>
+        <p>Dersom en student går glipp av bussen som går kl. 08:00, må de vente en time til neste buss går. Dette kan føre til at de ankommer skolen 30 minutter for sent, noe som kan bety tap av verdifull undervisningstid og muligens glipp av viktige innleveringer eller forelesninger. I verste fall kan de miste hele dagen dersom det ikke finnes andre alternativer for transport.</p>
+    </section>
+</body>
+</html>

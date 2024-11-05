@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #ddd;
+    background-color: #222;
+}
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #333;
+    color: #eee;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-section h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.hero-section button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #ddd;
+    background-color: #444;
+    border: none;
+    cursor: pointer;
+}
+
+.hero-section button:hover {
+    background-color: #666;
+}
+
+#story-section {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #ddd;
+}
+
+h2, h3 {
+    color: #ccc;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+#map {
+    height: 500px;
+    margin-top: 20px;
+    border: 1px solid #444;
+}
+
+#bus-info {
+    margin-top: 20px;
+}
+
+#bus-schedule {
+    list-style-type: none;
+    padding: 0;
+}
+
+#bus-schedule li {
+    background-color: #444;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
