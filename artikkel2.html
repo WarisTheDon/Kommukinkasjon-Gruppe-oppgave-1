@@ -5,24 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pendling fra Sarpsborg til Høgskolen i Østfold</title>
     <link rel="stylesheet" href="artikkel2.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <style>
         body {
             font-family: Arial, sans-serif;
+            justify-content: center;
+            align-items: center;
             line-height: 1.6;
             margin: 0;
             padding: 0;
             background-color: #1e1e1e; /* Mørk bakgrunn */
             color: #eaeaea; /* Lys tekst */
+           
         }
         .hero-section {
-            background: url('your-image-path.jpg') no-repeat center center/cover;
-            height: 400px;
-            color: #fff;
-            text-align: center;
-            padding: 100px 20px;
-            position: relative;
-            box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5); /* Mørkere effekt */
-        }
+    box-sizing: border-box; /* Inkluder padding i høyden og bredden */
+    background: url('your-image-path.jpg') no-repeat center center/cover;
+    height: 100vh;
+    width: 100vw;
+    max-width: 2000px;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px; /* Juster padding som nødvendig */
+    position: relative;
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
+}
+
+
+
         .hero-section h1 {
             font-size: 2.5em;
             text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
@@ -68,6 +78,32 @@
             border-radius: 8px;
             overflow: hidden;
         }
+
+        #kartVisning {
+            height: 100vh;
+            width: 80%;
+            align-self: center;
+        }
+        #holdeplassListe {
+            width: 20%;
+            padding: 2px;
+            background-color: #f4f4f4;
+            overflow-y: auto;
+        }
+        .holdeplass-item {
+            cursor: pointer;
+            padding: 2px;
+            margin-bottom: 2px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .holdeplass-item:hover {
+            background-color: #e6e6e6;
+        }
+        .holdeplass-item.aktiv {
+            background-color: #d4edda;
+        }
     </style>
 </head>
 <body>
@@ -80,8 +116,12 @@
     <section id="story-section">
         <h2>Pendling fra Sarpsborg til Høgskolen i Østfold: En utfordring i tid</h2>
         <p>For mange studenter ved Høgskolen i Østfold er daglig pendling fra Sarpsborg en realitet. Med bussavganger som går én gang i timen, er studenter avhengige av å time sin reise perfekt for å unngå forsinkelser.</p>
-        <p>Ifølge tall fra <a href="https://www.ssb.no/utdanning/statistikk" target="_blank">Statistisk sentralbyrå</a> pendler omtrent 40% av studentene ved Høgskolen i Østfold fra nærliggende byer som Sarpsborg og Fredrikstad. Dette betyr at over 1000 studenter er avhengige av offentlig transport for å komme seg til og fra studiene hver dag. Mange rapporterer om problemer med forsinkede avganger og overfylte busser, som gjør pendlingen til en stressende opplevelse.</p>
-
+        <p>Ifølge Statistisk sentralbyrå (SSB) er det 6 900 studenter ved Høgskolen i Østfold. 
+            <a href="https://www.ssb.no/utdanning/hoyere-utdanning/statistikk/studenter-i-universitets-og-hogskoleutdanning">SSB</a>
+             Av disse er 2 492 studenter fra Sarpsborg og Fredrikstad. 
+            SSB
+             Dette betyr at omtrent 36% av studentene ved Høgskolen i Østfold kommer fra disse byene.</p>
+        
         <div id="map"></div>
         <div id="directions-info"></div>
     </section>
@@ -89,7 +129,7 @@
     <section id="missed-bus">
         <h3>Hva skjer hvis du mister bussen?</h3>
         <p>Dersom en student går glipp av bussen som går kl. 08:00, kan det få betydelige konsekvenser. Mohammed, en 22 år gammel student som pendler fra Sarpsborg, forteller: "Jeg mistet bussen en gang, og neste buss gikk ikke før en time senere. Jeg kom for sent til timen, og det gikk utover karakterene mine. Det føles som om jeg stadig må bekymre meg for transporten i stedet for å fokusere på studiene."</p>
-        <p>Det er også rapportert at omtrent 30% av studentene har opplevd å komme for sent til forelesninger minst én gang i måneden på grunn av transportproblemer. Slike forsinkelser kan føre til dårligere oppmøte og prestasjoner på skolen, noe som kan ha langsiktige konsekvenser for studenters utdanning <a href="https://www.hiof.no/studier/statistikk" target="_blank">kilde</a>.</p>
+        <p>Det er også rapportert at omtrent 30% av studentene har opplevd å komme for sent til forelesninger minst én gang i måneden på grunn av transportproblemer. Slike forsinkelser kan føre til dårligere oppmøte og prestasjoner på skolen, noe som kan ha langsiktige konsekvenser for studenters utdanning <a href="https://hkdir.no/rapporter-undersokelser-og-statistikk/tilstandsrapport-for-hoeyere-utdanning-2023" target="_blank">kilde</a>.</p>
     </section>
 
     <section id="solutions">
@@ -112,7 +152,13 @@
 
     <section id="context">
         <h3>Kontekst rundt pendlerproblematikken</h3>
-        <p>Flere faktorer bidrar til at studenter fra Sarpsborg må pendle til Halden. Det høye boligprisen i Halden gjør det vanskelig for mange studenter å finne rimelige boliger, og mange velger derfor å bo i Sarpsborg hvor leiekostnadene er lavere. Dette fører til at studenter må tilpasse seg den begrensede transporten, noe som skaper utfordringer i hverdagen <a href="https://www.dnb.no/studenter/bolig.html" target="_blank">kilde</a>.</p>
+        <p>Flere faktorer bidrar til at studenter fra Sarpsborg må pendle til Halden. Det høye boligprisen i Halden gjør det vanskelig for mange studenter å finne rimelige boliger, og mange velger derfor å bo i Sarpsborg hvor leiekostnadene er lavere. Dette fører til at studenter må tilpasse seg den begrensede transporten, noe som skaper utfordringer i hverdagen.</p>
+    </section>
+
+
+    <section> 
+      
+
     </section>
 
     <script>
@@ -166,5 +212,6 @@
     </script>
     
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYzoBbq_65YOAhLzoIzhoDUUiQmUpa60E&callback=initMap"></script>
+    
 </body>
 </html>
