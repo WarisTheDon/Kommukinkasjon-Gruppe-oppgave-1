@@ -1,0 +1,381 @@
+/* ===========================
+   General & Reset Styles
+   =========================== */
+   body {
+    width: 100%;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    font-size: 19px;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #007bff;
+    padding-top: 2em;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* ===========================
+     Header Styles
+     =========================== */
+  header {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("Bilder/HSS_logo.png");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    position: relative;
+  }
+  
+  header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(120deg, #02aab0 0%, #00cdac 100%);
+    opacity: 0.6;
+    z-index: -1;
+  }
+  
+  header h1 {
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.8);
+    margin-bottom: 0.5rem;
+    transform: translateY(-50px);
+    opacity: 0;
+    animation: slideIn 0.5s forwards 0.5s;
+  }
+  
+  header a {
+    background: #00cdac;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transform: translateY(50px);
+    opacity: 0;
+    animation: slideIn 0.5s forwards 0.75s;
+  }
+  
+  header a:hover {
+    background-image: linear-gradient(120deg, #02aab0 0%, #00cdac 100%);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* ===========================
+     Keyframes
+     =========================== */
+  @keyframes slideIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* ===========================
+     Introduction Section
+     =========================== */
+  #innledning {
+    background-image: url("Bilder/trio.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  
+  /* ===========================
+     Article & Content Styles
+     =========================== */
+  #artikkelekte {
+    padding: 40px;
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #f5f5f5;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    font-family: "Arial", sans-serif;
+    line-height: 1.8;
+    color: #333;
+  }
+  
+  #artikkelekte h2 {
+    color: #000000;
+    margin-top: 1em;
+  }
+  
+  #artikkelekte h3 {
+    color: #6b98eb;
+    margin-top: 4em;
+  }
+  
+  #artikkelekte h3:after {
+    background: #ebc06b;
+  }
+  
+  #artikkelekte p {
+    font-family: "Merriweather", sans-serif;
+    text-align: justify;
+    color: #555;
+    font-size: 19px;
+  }
+  
+  /* ===========================
+     Image Styles
+     =========================== */
+  .image-container {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .salomon-image{
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border: 3px solid #ebc06b;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+  }
+  
+  .salomon-image:hover {
+    transform: scale(1.05);
+  }
+  
+  figcaption {
+    margin-top: 8px;
+    font-style: italic;
+    color: rgb(0, 0, 0);
+    text-shadow: #ffffff 1px 1px;
+    text-align: center;
+  }ß
+
+  .scrollContainer {
+    width: 100vw;
+    min-height: 60vh;
+    overflow: hidden;
+    transition: background-image 2s;
+  }
+  
+  .scrollText {
+    margin: 50vh auto;
+    max-width: 50rem;
+    padding: 1rem;
+    background: #f2cf8a;
+    color: #000000;
+  }
+  
+  /* ===========================
+     Video Content Styles
+     =========================== */
+  #artikkelekte .video-content {
+    max-width: 100%;
+    margin: 20px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    padding-top: 56.25%;
+    background: #000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  #artikkelekte .video-content video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* ===========================
+     Links & Typography
+     =========================== */
+  #artikkelekte a {
+    color: #5a2a82;
+    text-decoration: underline;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  #artikkelekte a:hover {
+    color: #ebc06b;
+  }
+  
+  article {
+    border: 0px solid #5c5858;
+    background: #f3f3f3;
+    padding: 1.5rem;
+    margin-bottom: 5px;
+  }
+  
+  /* ===========================
+     Sidebar & Map Styles
+     =========================== */
+  #klubbkart {
+    width: 800px;
+    max-height: 700px;
+    overflow-y: auto;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  #klubbkart button {
+    font-size: 0.8em;
+    padding: 5px 10px;
+    margin: 10px 0;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #klubbkart button:hover {
+    background-color: #0056b3;
+  }
+  
+  #klubbkart h3 {
+    font-size: 1em;
+    margin: 0.5em 0;
+  }
+  
+  /* ===========================
+     Main Layout
+     =========================== */
+  main {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    max-width: 900px;
+    margin: 10px auto;
+  }
+  
+  /* ===========================
+     Footer Styles
+     =========================== */
+  footer {
+    clear: both;
+    text-align: center;
+    padding: 1rem 0;
+    background: #f2cf8a;
+    color: #ffffff;
+    width: 100%;
+    position: relative;
+  }
+  
+  /* ===========================
+     Responsive Styles
+     =========================== */
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 1.2rem;
+    }
+  
+    header a {
+      font-size: 0.8rem;
+    }
+  
+    .scrollText {
+      width: 90%;
+      padding: 3px;
+    }
+  
+    .scrollText p {
+      font-size: 16px;
+    }
+  
+    .sidebar {
+      font-size: 0.8rem;
+    }
+  
+    .player-entry {
+      padding: 0.5rem;
+    }
+  
+    .container,
+    .timeline {
+      width: 95%;
+      max-width: 95%;
+    }
+  
+    h1 {
+      font-size: 1.6rem;
+    }
+  
+    #artikkelekte {
+      max-width: 100%;
+      padding: 20px;
+      margin: 20px auto;
+    }
+  
+    #artikkelekte h2 {
+      font-size: 20px;
+    }
+  
+    #artikkelekte h3 {
+      font-size: 18px;
+    }
+  
+    #artikkelekte p {
+      font-size: 16px;
+    }
+  
+    figcaption {
+      font-size: 16px;
+    }
+  
+    .text-content,
+    .image-content {
+      float: none;
+      width: auto;
+      margin: 20px 0;
+    }
+  
+    .image-content img {
+      width: 100%;
+      margin: 0 auto;
+    }
+  
+    footer {
+      padding: 1rem;
+      width: 100%;
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    #klubbkart {
+      width: 100%;
+      max-height: 589px;
+      padding: 10px;
+      text-align: left;
+    }
+  
+    #klubbkart button {
+      font-size: 10px;
+      padding: 8px 12px;
+      margin: 5px 0;
+      text-align: left;
+    }
+  
+    #klubbkart h3 {
+      font-size: 11px;
+      margin: 5px 0;
+    }
+  }
+  
