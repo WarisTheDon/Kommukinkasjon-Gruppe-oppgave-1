@@ -1,8 +1,6 @@
-/* ===========================
-   General & Reset Styles
-   =========================== */
-   body {
-    width: 100%;
+body {
+
+  width: 100%;
     overflow-x: hidden;
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -12,34 +10,23 @@
     font-size: 19px;
   }
   
-  h1 {
-    text-align: center;
-    color: #007bff;
-    padding-top: 2em;
-  }
-  
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  /* ===========================
-     Header Styles
-     =========================== */
   header {
     width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url("Bilder/HSS_logo.png");
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url("Bilder/HSS_logo.png"); /* Logo er tatt fra https://haldenstudentsamfund.no/bli-med-i-hss */
     background-size: cover;
     background-position: center;
     text-align: center;
     position: relative;
   }
-  
   header::before {
     content: "";
     position: absolute;
@@ -47,7 +34,11 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: linear-gradient(120deg, #02aab0 0%, #00cdac 100%);
+    background-image: linear-gradient(
+      120deg,
+      #02aab0 0%,
+      #00cdac 100%
+    );
     opacity: 0.6;
     z-index: -1;
   }
@@ -60,6 +51,24 @@
     transform: translateY(-50px);
     opacity: 0;
     animation: slideIn 0.5s forwards 0.5s;
+  }
+
+  #figcaption_smasher {
+    color: #d4af37; /* Gullfarge for et profesjonelt preg */
+    font-style: italic;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Diskré skygge for dybde */
+  }
+  
+  
+  article {
+    border: 1px solid #f4f1f1;
+    background: #f3f3f3;
+    padding: 1.5rem;
+    margin-bottom: 5px;
+  }
+  
+  h1 {
+    text-align: center;
   }
   
   header a {
@@ -80,9 +89,6 @@
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
   }
   
-  /* ===========================
-     Keyframes
-     =========================== */
   @keyframes slideIn {
     to {
       opacity: 1;
@@ -90,20 +96,27 @@
     }
   }
   
-  /* ===========================
-     Introduction Section
-     =========================== */
   #innledning {
-    background-image: url("Bilder/trio.jpg");
+    background-image: url("Bilder/trio.jpg"); /* Bilde av Ezat Jakob */
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
   }
   
-  /* ===========================
-     Article & Content Styles
-     =========================== */
+  #innledning2 {
+    background-image: url(Bilder/ram.jpg); /* Bilde av Ezat Jakob */
+    background-attachment: fixed;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
   #artikkelekte {
     padding: 40px;
     max-width: 800px;
@@ -120,13 +133,12 @@
     color: #000000;
     margin-top: 1em;
   }
-  
   #artikkelekte h3 {
     color: #6b98eb;
     margin-top: 4em;
   }
   
-  #artikkelekte h3:after {
+  #artikkelekteh3:after {
     background: #ebc06b;
   }
   
@@ -137,15 +149,12 @@
     font-size: 19px;
   }
   
-  /* ===========================
-     Image Styles
-     =========================== */
   .image-container {
     text-align: center;
     margin: 20px 0;
   }
   
-  .salomon-image{
+  .player-image {
     width: 100%;
     max-width: 800px;
     height: auto;
@@ -154,36 +163,10 @@
     transition: transform 0.3s ease;
   }
   
-  .salomon-image:hover {
+  .player-image:hover {
     transform: scale(1.05);
   }
   
-  figcaption {
-    margin-top: 8px;
-    font-style: italic;
-    color: rgb(0, 0, 0);
-    text-shadow: #ffffff 1px 1px;
-    text-align: center;
-  }ß
-
-  .scrollContainer {
-    width: 100vw;
-    min-height: 60vh;
-    overflow: hidden;
-    transition: background-image 2s;
-  }
-  
-  .scrollText {
-    margin: 50vh auto;
-    max-width: 50rem;
-    padding: 1rem;
-    background: #f2cf8a;
-    color: #000000;
-  }
-  
-  /* ===========================
-     Video Content Styles
-     =========================== */
   #artikkelekte .video-content {
     max-width: 100%;
     margin: 20px auto;
@@ -203,9 +186,14 @@
     height: 100%;
   }
   
-  /* ===========================
-     Links & Typography
-     =========================== */
+  #artikkelekte video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+  }
+  
   #artikkelekte a {
     color: #5a2a82;
     text-decoration: underline;
@@ -216,16 +204,37 @@
     color: #ebc06b;
   }
   
-  article {
-    border: 0px solid #5c5858;
-    background: #f3f3f3;
-    padding: 1.5rem;
-    margin-bottom: 5px;
+  figcaption {
+    margin-top: 8px;
+    font-style: italic;
+    color: rgb(0, 0, 0);
+    text-shadow: #ffffff 1px 1px;
+    text-align: center;
   }
   
-  /* ===========================
-     Sidebar & Map Styles
-     =========================== */
+  .scrollContainer {
+    width: 100vw;
+    min-height: 60vh;
+    overflow: hidden;
+    transition: background-image 2s;
+  }
+  
+  .containertext {
+    margin: 50vh auto;
+    max-width: 50rem;
+    padding: 1rem;
+    background: #f2cf8a;
+    color: #000000;
+  }
+  
+  main {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    max-width: 900px;
+    margin: 10px auto;
+  }
+  
   #klubbkart {
     width: 800px;
     max-height: 700px;
@@ -254,20 +263,28 @@
     margin: 0.5em 0;
   }
   
-  /* ===========================
-     Main Layout
-     =========================== */
-  main {
-    display: flex;
-    gap: 1rem;
-    width: 100%;
-    max-width: 900px;
-    margin: 10px auto;
+  @media (max-width: 600px) {
+    #klubbkart {
+      width: 100%;
+      max-height: 589px;
+      padding: 10px;
+      text-align: left;
+    }
+  
+    #klubbkart button {
+      font-size: 10px;
+      padding: 8px 12px;
+      margin: 5px 0;
+      text-align: left;
+    }
+  
+    #klubbkart h3 {
+      font-size: 11px;
+      margin: 0.3em 0;
+      text-align: left;
+    }
   }
   
-  /* ===========================
-     Footer Styles
-     =========================== */
   footer {
     clear: both;
     text-align: center;
@@ -278,9 +295,6 @@
     position: relative;
   }
   
-  /* ===========================
-     Responsive Styles
-     =========================== */
   @media (max-width: 768px) {
     header h1 {
       font-size: 1.2rem;
@@ -290,12 +304,12 @@
       font-size: 0.8rem;
     }
   
-    .scrollText {
+    .containertext {
       width: 90%;
       padding: 3px;
     }
   
-    .scrollText p {
+    .containertext p {
       font-size: 16px;
     }
   
@@ -314,7 +328,7 @@
     }
   
     h1 {
-      font-size: 1.6rem;
+      font-size: 2rem;
     }
   
     #artikkelekte {
@@ -332,6 +346,10 @@
     }
   
     #artikkelekte p {
+      font-size: 16px;
+    }
+  
+    #figcaption_smasher {
       font-size: 16px;
     }
   
@@ -357,25 +375,3 @@
       font-size: 16px;
     }
   }
-  
-  @media (max-width: 600px) {
-    #klubbkart {
-      width: 100%;
-      max-height: 589px;
-      padding: 10px;
-      text-align: left;
-    }
-  
-    #klubbkart button {
-      font-size: 10px;
-      padding: 8px 12px;
-      margin: 5px 0;
-      text-align: left;
-    }
-  
-    #klubbkart h3 {
-      font-size: 11px;
-      margin: 5px 0;
-    }
-  }
-  
