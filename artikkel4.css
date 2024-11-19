@@ -96,7 +96,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(pictures/martinluther.jpg);
+  background-image: url(Bilder/martinluther.jpg);
   background-size: cover;
   background-position: center;
   color: #ffffff;
@@ -318,7 +318,7 @@ header {
   border-radius: 8px; /* Subtle rounded edges */
   font-size: 1rem;
   line-height: 1.6;
-  text-align: justify;
+  text-align: left;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Lighter shadow for gentle depth */
   backdrop-filter: blur(4px); /* Softer blur for a glassy, refined look */
   border: 1px solid rgba(200, 200, 200, 0.3); /* Thinner, light gray border */
@@ -347,7 +347,7 @@ header {
 
 #introduksjon {
  
-  background-image:url(pictures/art5.jpg);
+  background-image:url(Bilder/art5.jpg);
   background-attachment: fixed;
   background-size: 200vh;
   
@@ -581,7 +581,7 @@ footer {
 
 #fremtiden {
   position: relative;
-  background-image: url("pictures/art5_rotated_180.png");
+  background-image: url("Bilder/art5_rotated_180.png");
   background-attachment: fixed;
   background-size: 200vh;
   background-position: center center;

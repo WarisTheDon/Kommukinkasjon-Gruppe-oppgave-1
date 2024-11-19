@@ -5,7 +5,7 @@ const centerLong = 8.468;
 // Array of places with map data
 const places = [
   { name: "Kontoret i Fredrikstad", lat: 59.2128, long: 10.9309, image: "images/pristina.png", type: "football", zoomLevel: 16 },
-  { name: "Kontoret på remmen", lat: 59.1292, long: 11.3528, image: "pictures/martinhi.jpg", type: "volleyball", zoomLevel: 15 },
+  { name: "Kontoret på remmen", lat: 59.1292, long: 11.3528, image: "Bilder/martinhi.jpg", type: "volleyball", zoomLevel: 15 },
   { name: "Kristiansand LSU", lat: 58.1638, long: 8.0030, image: "images/kvik_halden.png", type: "football", zoomLevel: 16 },
   { name: "Trondheim representant for Hiøf", lat: 63.4195, long: 10.4020, image: "images/idd.png", type: "football", zoomLevel: 15 },
   { name: "Drammen NSO konferanse", lat: 59.7438, long: 10.1936, image: "images/aremark.png", type: "football", zoomLevel: 15 },
@@ -26,14 +26,14 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 
 // Icons for map markers
 const footballIcon = L.icon({
-  iconUrl: "pictures/ektemartin.jpg",
+  iconUrl: "Bilder/ektemartin.jpg",
   iconSize: [40, 40],
   iconAnchor: [20, 20],
   popupAnchor: [0, -20],
 });
 
 const volleyballIcon = L.icon({
-  iconUrl: "pictures/ektemartin.jpg",
+  iconUrl: "Bilder/ektemartin.jpg",
   iconSize: [40, 40],
   iconAnchor: [20, 20],
   popupAnchor: [0, -20],

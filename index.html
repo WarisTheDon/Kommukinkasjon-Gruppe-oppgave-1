@@ -1,67 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NX News</title>
+    <title>NX Nyheter | Artikler for Studenter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="back.css">
 </head>
 <body>
-    <header class="main-header">
-        <div class="header-content">
-            <h1>NX News</h1>
-            <p>Utforsk artikler som gir innsikt i studentenes virkelighet</p>
+    <!-- Hero Seksjon -->
+    <header class="hero-seksjon">
+        <div class="overlay"></div>
+        <div class="container">
+            <h1>NX Nyheter</h1>
+            <p>Utforsk historier som inspirerer og skaper innsikt i studentlivet.</p>
+            <a href="#artikler" class="cta-knapp">Utforsk Artikler</a>
         </div>
     </header>
 
-    <main class="articles-showcase">
-        <!-- Article 1 -->
-        <div class="article article-1">
-            <div class="content">
-                <h3>Økonomiske Utfordringer</h3>
-                <h2>Yashar Hiwi: Lånekassen gir akkurat nok til husleie</h2>
-                <p>Hvordan kan studenter navigere økte levekostnader uten deltidsjobb?</p>
-                <a href="Artikkel1Ny.html" class="read-more">Utforsk</a>
+    <!-- Artikler Seksjon -->
+    <main id="artikler" class="artikler-seksjon">
+        <div class="container">
+            <h2 class="seksjon-tittel">Utvalgte Artikler</h2>
+            <div class="artikler-grid">
+                <!-- Artikkelkort 1 -->
+                <div class="artikkel-kort">
+                    <img src="Bilder/litemategt.png" alt="Økonomiske Utfordringer">
+                    <div class="kort-innhold">
+                        <h3>Økonomiske Utfordringer</h3>
+                        <h4>Yashar Hiwi: Lånekassen gir akkurat nok til husleie</h4>
+                        <p>Hvordan kan studenter navigere økte levekostnader uten deltidsjobb?</p>
+                        <a href="Artikkel1Ny.html" class="les-mer">Les Mer</a>
+                    </div>
+                </div>
+                <!-- Artikkelkort 2 -->
+                <div class="artikkel-kort">
+                    <img src="Bilder/pendling2.jpg" alt="Pendlingens Pris">
+                    <div class="kort-innhold">
+                        <h3>Pendlingens Pris</h3>
+                        <h4>Pendling: En daglig utfordring for studenter</h4>
+                        <p>Fra Sarpsborg til Halden: Hvordan påvirker pendling studiehverdagen?</p>
+                        <a href="artikkel2.html" class="les-mer">Les Mer</a>
+                    </div>
+                </div>
+                <!-- Artikkelkort 3 -->
+                <div class="artikkel-kort">
+                    <img src="Bilder/trio.jpg" alt="Idrett og Samhold">
+                    <div class="kort-innhold">
+                        <h3>Idrett og Samhold</h3>
+                        <h4>Studentidrett: En kilde til balanse</h4>
+                        <p>Oppdag hvordan idrett skaper fellesskap og avkobling for studenter.</p>
+                        <a href="Artikkel3.html" class="les-mer">Les Mer</a>
+                    </div>
+                </div>
+                <!-- Artikkelkort 4 -->
+                <div class="artikkel-kort">
+                    <img src="Bilder/martinarthur2.jpg" alt="Fremtiden i Fokus">
+                    <div class="kort-innhold">
+                        <h3>Fremtiden i Fokus</h3>
+                        <h4>Følg reisen til Martin Andersen</h4>
+                        <p>Fra Student til Leder: Martin Andersens Suksessreise.</p>
+                        <a href="artikkel4.html" class="les-mer">Les Mer</a>
+                    </div>
+                </div>
             </div>
-            <img src="Bilder/litemategt.png" alt="Yashar Hiwi">
-        </div>
-
-        <!-- Article 2 -->
-        <div class="article article-2">
-            <div class="content">
-                <h3>Pendlingens Pris</h3>
-                <h2>Pendling: En daglig utfordring for studenter</h2>
-                <p>Fra Sarpsborg til Halden: Hvordan påvirker pendling studiehverdagen?</p>
-                <a href="artikkel2.html" class="read-more">Utforsk</a>
-            </div>
-            <img src="Bilder/pendling2.jpg" alt="Pendling til skolen">
-        </div>
-
-        <!-- Article 3 -->
-        <div class="article article-3">
-            <div class="content">
-                <h3>Idrett & Samhold</h3>
-                <h2>Studentidrett: En kilde til balanse</h2>
-                <p>Oppdag hvordan idrett skaper fellesskap og avkobling for studenter.</p>
-                <a href="Artikkel3.html" class="read-more">Utforsk</a>
-            </div>
-            <img src="Bilder/trio.jpg" alt="Studentidrett">
-        </div>
-
-        <!-- Article 4 -->
-        <div class="article article-4">
-            <div class="content">
-                <h3>Fremtiden i Fokus</h3>
-                <h2>Følg reisen til Martin Andersen</h2>
-                <p>Fra Student til Leder:  Martin Andersens Suksessreise</p>
-                <a href="artikkel4.html" class="read-more">Utforsk</a>
-            </div>
-            <img src="Bilder/martinarthur2.jpg" alt="Økonomisk usikkerhet">
         </div>
     </main>
 
-    <footer class="main-footer">
-        <p>&copy; 2024 NX News | Designet av NX Team</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 NX Nyheter | Designet av NX Team</p>
+        </div>
     </footer>
 </body>
 </html>

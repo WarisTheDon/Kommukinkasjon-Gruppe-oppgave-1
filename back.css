@@ -1,133 +1,135 @@
-/* Reset and Global Styles */
-body, html {
+/* Globale Stiler */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+body {
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(120deg, #f0f4f8, #e6edf5);
-    color: #333;
+    line-height: 1.6;
+    color: #2d3748;
+    background: linear-gradient(180deg, #edf2f7, #ffffff);
+    overflow-x: hidden;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
 }
 
-a {
-    text-decoration: none;
-}
-
-/* Header */
-.main-header {
-    background: linear-gradient(90deg, #1c1c1c, #333);
-    color: #fff;
-    text-align: center;
-    padding: 2rem 1rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.main-header h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-}
-
-.main-header p {
-    font-size: 1.2rem;
-    color: #bbb;
-}
-
-/* Articles Showcase */
-.articles-showcase {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    padding: 2rem;
-    justify-content: center;
-}
-
-/* Article Cards */
-.article {
+/* Hero Seksjon */
+.hero-seksjon {
     position: relative;
-    width: 300px;
-    height: 450px;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    background: #fff;
-    transform-origin: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100vh;
+    background: url('Bilder/hero-bg.jpg') center/cover no-repeat;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.article img {
-    width: 100%;
-    height: 60%;
-    object-fit: cover;
-}
-
-.article .content {
-    padding: 1rem;
-    color: #fff;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    background: linear-gradient(120deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
+    color: #ffffff;
 }
-
-.article h2 {
-    font-size: 1.4rem;
-    margin-bottom: 0.5rem;
+.hero-seksjon .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(26, 32, 44, 0.85); /* Mørk blå overlay */
+    z-index: 1;
 }
-
-.article h3 {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-    color: #f0cb7b;
+.hero-seksjon .container {
+    position: relative;
+    z-index: 2;
 }
-
-.article p {
-    font-size: 1rem;
+.hero-seksjon h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
     margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
-
-.read-more {
-    text-decoration: none;
-    background: #f0cb7b;
-    color: #333;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
+.hero-seksjon p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+.hero-seksjon .cta-knapp {
+    padding: 0.8rem 2rem;
+    background: #b7791f; /* Mørk gylden */
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 30px;
     font-size: 1rem;
-    transition: background 0.3s ease, transform 0.3s ease;
+    transition: transform 0.3s ease, background 0.3s ease;
 }
-
-.read-more:hover {
-    background: #333;
-    color: #fff;
+.hero-seksjon .cta-knapp:hover {
+    background: #4a5568; /* Myk grå */
     transform: scale(1.1);
 }
 
-/* Hover Effects */
-.article:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-}
-
-/* Gradient Backgrounds for Articles */
-.article-1 .content {
-    background: linear-gradient(135deg, #3c8dbc, #72c2e1); /* Økonomi */
-}
-
-.article-2 .content {
-    background: linear-gradient(135deg, #ffa500, #ffcc80); /* Pendling */
-}
-
-.article-3 .content {
-    background: linear-gradient(135deg, #4caf50, #81c784); /* Idrett */
-}
-
-.article-4 .content {
-    background: linear-gradient(135deg, #e91e63, #f06292); /* Fremtid */
-}
-
-/* Footer */
-.main-footer {
-    background: #333;
-    color: #bbb;
+/* Artikler Seksjon */
+.artikler-seksjon {
+    padding: 4rem 0;
     text-align: center;
-    padding: 1rem;
+    background: #ffffff;
+}
+.seksjon-tittel {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-family: 'Playfair Display', serif;
+    color: #1a202c; /* Dyp mørkeblå */
+}
+.artikler-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+.artikkel-kort {
+    background: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.artikkel-kort img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.artikkel-kort .kort-innhold {
+    padding: 1.5rem;
+}
+.artikkel-kort h3 {
+    font-size: 1rem;
+    color: #b7791f; /* Mørk gylden */
+    margin-bottom: 0.5rem;
+}
+.artikkel-kort h4 {
+    font-size: 1.2rem;
+    color: #1a202c;
+    margin-bottom: 1rem;
+}
+.artikkel-kort p {
+    font-size: 1rem;
+    color: #4a5568; /* Myk grå */
+    margin-bottom: 1.5rem;
+}
+.artikkel-kort .les-mer {
+    display: inline-block;
+    background: #1a202c; /* Dyp mørkeblå */
+    color: #ffffff;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+.artikkel-kort .les-mer:hover {
+    background: #b7791f;
+    color: #ffffff;
+    transform: scale(1.1);
+}
+.artikkel-kort:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
