@@ -133,3 +133,52 @@ body {
     transform: scale(1.05);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
+
+
+
+/* Footer Styles */
+.footer {
+    background: #1a202c; /* Dyp mørkeblå */
+    color: #edf2f7; /* Lys beige */
+    padding: 3rem 1rem;
+    text-align: center;
+}
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsivt grid */
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+.footer-section h4 {
+    font-size: 1.2rem;
+    color: #facc15; /* Mørk gylden */
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.footer-section p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #e2e8f0; /* Lys tekstfarge */
+}
+.footer-bottom {
+    border-top: 1px solid #4a5568; /* Myk grå skillelinje */
+    padding-top: 1rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #e2e8f0;
+}
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Responsivitet */
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr; /* Én kolonne på mindre skjermer */
+    }
+}
