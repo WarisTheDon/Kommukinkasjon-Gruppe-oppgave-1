@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Følg reisen til Martin Andersen</title>
+    <link href="artikkel4.css" rel="stylesheet" media="all" />
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+    
+  </head>
+
+  <body>
+
+
+
+
+
+    
+    <button onclick="scrollToTop()" id="topBtn" title="Gå til toppen">↑</button>
+
+    
+    
+
+
+
+ <!-- Collapsible Navigation Bar -->
+ <aside class="unique-nav hidden" id="unique-navbar">
+  <h2>Martins Reise</h2>
+  <nav>
+      <ol>
+          <li>
+              <button class="unique-toggle">Innledning</button>
+              <ol class="unique-subchapter">
+                  <li><a href="#introyesyes">Velkommen</a></li>
+              </ol>
+          </li>
+          <li>
+              <button class="unique-toggle">Kapittel I</button>
+              <ol class="unique-subchapter">
+                  <li><a href="#intro">Ski</a></li>
+              </ol>
+          </li>
+          <li>
+              <button class="unique-toggle">Kapittel II</button>
+              <ol class="unique-subchapter">
+                  <li><a href="#training">Ansvar & Lederskap</a></li>
+              </ol>
+          </li>
+          <li>
+              <button class="unique-toggle">Kapittel III</button>
+              <ol class="unique-subchapter">
+                  <li><a href="#chapter3-education">Lederskap & Teknologiske Utfordringer</a></li>
+              </ol>
+          </li>
+          <li>
+              <button class="unique-toggle">Kapittel IV</button>
+              <ol class="unique-subchapter">
+                  <li><a href="#masteroppgaven">Fra Master til Mentor</a></li>
+              </ol>
+          </li>
+      </ol>
+  </nav>
+  <!-- Close button moved to the bottom -->
+  <button id="unique-close" class="unique-close-button">✖ Lukke Meny</button>
+</aside>
+
+<!-- Visible Open Button for Sidebar -->
+<button id="unique-open" class="unique-open-button">☰</button>
+
+<div class="loader">
+  <div class="loader-content">
+    <svg class="spinner" viewBox="0 0 50 50">
+      <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="4"></circle>
+    </svg>
+    <span>Laster Siden</span>
+  </div>
+</div>
+
+
+
+
+
+<header>
+  <div class="overlay"></div>
+  <div class="profile-container">
+   
+
+    <div class="header-content">
+      <h1>Fra Student til Leder:  Martin Andersens Suksessreise</h1>
+      <a href="#introduksjon" class="cta-button">Bli med gjennom reisen hans</a>
+    </div>
+  </div>
+
+
+
+</header>
+<section class="scrollContainer" id="introduksjon">
+  <div class="scrollText">
+    <p>
+      Martins oppvekst i Ski var stille og ensom. Mens andre lo og lekte, var han en observatør – ikke en deltaker.
+    </p>
+  </div>
+  <div class="dramatisktekst">
+    <p>
+      Han følte seg usynlig.
+    </p>
+  </div>
+ 
+  <div class="dramatisktekst">
+    <p>
+      Oversett.
+    </p>
+  </div>
+  <div class="dramatisktekst">
+    <p>
+      Utenfor.
+    </p>
+  </div>
+  <div class="scrollText">
+    <p>
+      <strong>Mobbingen  </strong>var tung å bære, men den vekket noe i ham 
+    </p>
+  </div>
+  <div class="dramatisktekstgoodnews">
+    <p>
+      Et <strong>gnist </strong>
+    </p>
+  </div>
+  <div class="scrollText">
+    <p>
+      Som 12-åring kom redningen i form av en gammel datamaskin, kjøpt på loppemarked av faren. Her startet en reise som skulle forandre alt.
+    </p>
+  </div>
+  <div class="scrollText">
+    <p>
+      Gjennom koding oppdaget Martin en verden han kunne kontrollere. En verden uten mobbing. En verden der han følte seg
+    </p>
+  </div>
+  <div class="dramatisktekst">
+    <p>
+      <light> fri </light>
+    </p>
+  
+
+
+
+
+
+</section>
+
+
+
+
+
+
+<section class="textSection" id="intro">
+  <h2>En modig ny start</h2>
+  <p >
+    Etter videregående bestemte Martin seg for å begynne på nytt. I 2018 pakket håndkofferten og flyttet til Halden for å starte på bachelorstudiet i datateingeniør ved HiØF
+  </p>
+  <p class="sitat">"Det var skummelt å flytte så langt hjemmefra, men jeg visste at jeg trengte en ny start",
+    sier Andersen.</p>
+  <p >
+    Han fullførte bacheloren i 2022, men ønsket å nå lenger. Et masterstudium fulgte, og i 2024 leverte han en oppgave som ble høyt verdsatt av både fagmiljøet og medstudenter.
+  </p>
+  <p >
+    Utover studiene fant Martin sin plass i studentmiljøet. Han gikk fra å være en ny student til en sentral skikkelse, kjent for sitt arbeid med å styrke fellesskapet og studentenes stemme.
+  </p>
+  <img src="pictures/martinarthur2.jpg">
+  
+</section>
+
+
+
+
+
+<div class="timeline">
+ 
+  <div class="timeline-item">
+    <div class="content">
+      <h3>2018</h3>
+      <p><strong>Milepæl:</strong> Begynte på bachelor i datateknikk</p>
+      <p><strong>Rolle/Arrangement:</strong> Bachelorstudent ved Høgskolen i Østfold</p>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="content">
+      <h3>2022</h3>
+      <p><strong>Milepæl:</strong> Fullførte bachelorgrad</p>
+      <p><strong>Rolle/Arrangement:</strong> Bachelor i datateknikk</p>
+      <p><strong>Milepæl:</strong> Begynte på master i IT</p>
+      <p><strong>Rolle/Arrangement:</strong> Masterstudent ved Høgskolen i Østfold</p>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="content">
+      <h3>2024</h3>
+      <p><strong>Milepæl:</strong> Fullførte mastergrad i IT</p>
+      <p><strong>Rolle/Arrangement:</strong> Mottok A-grad for masteroppgave</p>
+      <p><strong>Milepæl:</strong> Studentleder ved Høgskolen i Østfold</p>
+      <p><strong>Rolle/Arrangement:</strong> Ledet studentdemokratiet og representerte HiØF på nasjonalt nivå</p>
+    </div>
+  </div>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="textSection" id="training">
+  <div class="container">
+    <div class="text-content">
+      <h2>Inkludering og lederskap – Essensen av studentlederrollen</h2>
+      <blockquote>
+        <p><em> 
+          "Halden ga meg en sjanse til å finne meg selv. Det var første gang jeg følte at jeg virkelig hørte hjemme et sted."
+        </em> </p>
+      </blockquote>
+
+      <p>
+        Under bachelorstudiet utmerket Martin seg både faglig og sosialt. Han ble kjent som en person som alltid stilte opp for andre – en egenskap som skulle bli hjørnesteinen i hans senere engasjement innen studentpolitikken.
+      </p>
+      <p>
+        På Høgskolen i Østfold fant han et inkluderende og støttende miljø. Han knyttet bånd til medstudenter som delte hans interesser, samtidig som han fikk inspirasjon fra forelesere som så potensialet i ham.
+      </p>
+
+      <blockquote>
+        <p><em> 
+          "Å være studentleder handler om å gi andre en stemme og sørge for at alle føler seg sett"
+        </em> </p>
+      </blockquote>
+
+      <h2>Essensielle egenskaper for en studentleder</h2>
+      <ul class="student-leader-skills">
+        <li><i class="fas fa-users"></i> <strong>Lederskap:</strong> Inspirere, motivere og veilede studenter for å skape et positivt miljø.</li>
+        <li><i class="fas fa-comments"></i> <strong>Kommunikasjon:</strong> Formidle ideer tydelig og effektivt, samtidig som man aktivt lytter og samarbeider.</li>
+        <li><i class="fas fa-handshake"></i> <strong>Konflikthåndtering:</strong> Løse utfordringer på en konstruktiv og inkluderende måte.</li>
+        <li><i class="fas fa-tasks"></i> <strong>Organisasjonsevner:</strong> Planlegge, prioritere og gjennomføre oppgaver med fokus på resultater.</li>
+        <li><i class="fas fa-heart"></i> <strong>Empati og engasjement:</strong> En genuin interesse for studentenes behov og deres stemmer.</li>
+      </ul>
+      
+    </div>
+  </div>
+</section>
+
+
+
+
+             
+
+             <div class="audio-container">
+              <audio controls autoplay>
+                <source src="pictures/hater styrke.mp3" type="audio/mp3">
+              
+              </audio>
+            </div>
+
+
+          <div class="image-caption">
+            <p>
+              En lydklipp fra Martin som forteller hvorfor akkurat han ble valgt som studentleder.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="textSection" id="future">
+      <h2>En Dag i Martins Rolle som Studentleder</h2>
+      <p>
+        Martins arbeidsdag er preget av både struktur og fleksibilitet, noe som gjenspeiler hans dedikasjon til studentenes trivsel. Etter å ha balansert studier og studentledelse gjennom flere år, har han utviklet en rutine som lar ham møte utfordringene i rollen med både ro og effektivitet. 
+        <br><br>
+        Dagen starter tidlig, kl. 07:30, hvor han tar seg tid til å gå gjennom kalenderen, sjekke e-poster og forberede seg mentalt på dagens oppgaver. Dette gir ham en mulighet til å sikre at han er klar for å delta i møter og samarbeide med både studenter og administrasjon.
+      </p>
+      <p>
+        Fra kl. 09:00 til 14:00, mandag til fredag, fokuserer Martin på en kombinasjon av administrative og sosiale oppgaver. Han deltar i møter med studentorganisasjoner, hjelper studenter med spørsmål eller utfordringer, og arbeider med langsiktige prosjekter for å styrke studentmiljøet. 
+        <br><br>
+        En av de viktigste aspektene ved Martins arbeidsdag er synlighet. Han er ofte ute på campus, møter studenter ansikt til ansikt og tar seg tid til å diskutere deres bekymringer eller ideer. Han beskriver dette som en av de mest givende delene av jobben.
+      </p>
+      <p>
+        Fredager tilbringer han ofte i Fredrikstad, hvor han deltar i regionale møter og arbeider med studentdemokratiet. Selv om disse dagene kan være hektiske, ser Martin dem som en viktig mulighet til å nettverke og samarbeide med andre studentledere på tvers av campus. Denne balansen mellom struktur og fleksibilitet lar Martin skape en sterk og inkluderende plattform for studentenes stemmer.
+      </p>
+      
+<style>
+  #chartdiv {
+    width: 100%;
+    justify-content: center;
+    
+    height: 500px;
+  }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Create a canvas for the chart -->
+  <canvas id="newPieChart" width="400" height="400"></canvas>
+  <!-- Resources -->
+  <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+  
+  
+
+      
+  <h2 id="chapter3-education">Uventet teknologisk utfordring under et arrangement</h2>
+  <p>
+    Det var en spenningsfylt dag på Høgskolen i Østfold. Martin hadde brukt flere uker på å planlegge et stort seminar som skulle samle studenter fra hele campus. Arrangementet skulle inneholde inspirerende foredrag og en livestream for studenter som ikke kunne delta fysisk. Alt virket perfekt tilrettelagt, men like før starten tok teknologien en dramatisk vending.
+  </p>
+  <p>
+    Prosjektoren nektet å starte, og lydanlegget var tyst. Klokken tikket, og deltakerne begynte å fylle rommet. I stedet for å la panikken ta overhånd, beholdt Martin roen. Med sitt smittende smil og sin naturlige evne til å lede, samlet han raskt et team av tekniske assistenter og engasjerte studenter for å løse problemet. Samtidig tok han scenen i bruk for å holde publikum engasjert.
+  </p>
+  <p>
+    Martin improviserte på stående fot. Han startet en spørsmålsrunde der han inviterte studenter til å dele sine tanker om teknologiens uforutsigbarhet. <strong>"Er det teknologiens feil, eller er det de som har laget den?"</strong> spurte han med et glimt i øyet. En student svarte spøkefullt: <strong>"Det er nok både vår og teknologiens feil, men vi skal klare det!"</strong> Latter fylte rommet, og stemningen gikk fra anspent til lett og optimistisk.
+  </p>
+  <p>
+    Til slutt, etter samarbeid og kreativ problemløsning, ble teknologien gjenopprettet, og arrangementet gikk som planlagt. For mange av deltakerne var det ikke bare foredragene som gjorde inntrykk, men også måten Martin håndterte krisen på. Med humor, ro og en evne til å vende utfordringer til muligheter, skapte han en opplevelse som ble husket lenge etterpå.
+  </p>
+  <div class="image-content">
+    <audio controls autoplay>
+      <source src="pictures/konkurranse.mp3" type="audio/mp3">
+    </audio>
+    <p>En lydklipp fra Martin som deler sin refleksjon om hendelsen.</p>
+  </div>
+  
+  <h2>Studentleder for over 7000 studenter</h2>
+
+  <blockquote><p><em>"Jeg er utrolig takknemlig for tilliten jeg har fått, min jobb er å sørge for at alle
+    studenter føler seg sett og hørt".</em></p></blockquote>
+  <p>
+    I 2024 ble Martin valgt som studentleder for HiØF, en rolle som innebærer å
+       representere over 7000 studenter ved campusene i Halden og Fredrikstad. Dette var en
+       milepæl for Martin, som nå fikk muligheten til å sette sine verdier ut i livet på en større
+       arena.
+    </p>
+  <p>
+    <em>"Studentdemokratiet ga meg et sosialt miljø og en balanse fra det intense arbeidet med masteroppgaven,"</em> sier Martin med et smil. For ham var kalenderen mer enn et verktøy – den ble en livline. Hver avtale, hvert møte, og hver oppgave ble nøye planlagt og prioritert for å sikre at han både kunne lykkes faglig og oppfylle sine forpliktelser som leder.
+  </p>
+  <p>
+    Rutiner var nøkkelen til hans suksess. Martin dedikerte morgentimene til akademiske oppgaver, og ettermiddagene til møter og aktiviteter som studentleder. Ved å holde et stramt, men fleksibelt tidsskjema, klarte han å navigere mellom studier og lederskap uten å ofre kvaliteten på noen av delene. Men det var ikke bare arbeidet som holdt ham motivert – det var menneskene rundt ham.
+  </p>
+  <p>
+    Gjennom studentdemokratiet fant Martin ikke bare en plattform for endring, men også et støttende fellesskap. Kollegene hans ble en kilde til inspirasjon og energi, og de minnet ham på hvorfor han begynte: å gjøre en forskjell for andre studenter. Hans evne til å kombinere struktur, engasjement og en genuin omsorg for andre er det som har gjort ham til den lederfiguren han er i dag.
+  </p>
+  <div class="image-content">
+    <img src="pictures/martinkontor.jpg" alt="liten bilde for text" />
+    <figcaption>
+      Fra dette kontoret styrer Martin arbeidet for ca. 7000 studenter. Hans daglige innsats viser hvordan lidenskap og disiplin kan forenes. <br>
+      <i class="fa-solid fa-image"></i> Foto: Ezat Jakob
+    </figcaption>
+  </div>
+  
+
+    </section>
+
+    <h1> <br>Kontoret til Martin og steder han har reist som studentleder for å representere Hiøf</h1>
+    <main>
+      <section class="textSection" id="lokasjoner">
+        <div class="mapContainer">
+          <nav id="klubbkart" class="mapSidebar">
+            <!-- Add any list or navigation items here -->
+          </nav>
+          <div id="map" class="mapCanvas"></div>
+        </div>
+      </section>
+    </main>
+    
+
+    
+
+   
+    <section class="textSection" id="masteroppgaven">
+
+      <br> 
+      <br>
+      <h1>Fikk A på masteroppgave</h1>
+
+      <h2>Martins A-oppgave innen bærekraftig teknologi for jordbruk viser hvordan innovasjon kan bidra til det grønne skiftet.
+      </h2>
+      <p>
+        Martins masteroppgave, som fikk karakteren A, fokuserte på en IoT-basert overvåking av jordbærdyrking. Ved å kombinere sensorer og maskinlæringsalgoritmer, utviklet han et system som hjelper bønder med å opprettholde optimale vekstforhold for innendørs jordbær. Oppgaven hans bidrar til bærekraftig landbruk og det grønne skiftet.
+           <!--Chart.js-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+
+    <canvas id="gradeChart" width="600" height="400"></canvas>
+        <div class="chart-container">
+          <h2>Statistikk for ITI52020, 2024 VÅR, Masteroppgave og muntlig eksamen</h2>
+          <canvas id="gradeChart"></canvas>
+        
+      </div>
+
+
+
+        <h2>Hvordan organiserte du arbeidet med oppgaven?</h2>
+        <p>
+          Jeg startet med en grundig planlegging og tidsplan. Jeg delte oppgaven inn i faser, som research, utvikling av systemet, testing og analyse.
+           Det hjalp meg å holde fokus og prioritere, slik at jeg kunne nå delmålene uten å miste oversikten
+        </p>
+
+        <h2>Var det noen utfordringer underveis, og hvordan løste du dem?</h2>
+        <p>
+          En av de største utfordringene var å håndtere store datamengder fra sensorene og få algoritmene til å tolke dem på en effektiv måte. 
+          Jeg jobbet mye med datarensing og optimalisering, slik at systemet ble mer presist og mindre ressurskrevend
+        </p>
+
+
+        <h2>Hvor mye tid brukte du totalt på masteroppgaven?</h2>
+        <p>
+          Jeg brukte omtrent seks måneder på selve oppgaven, fra idéfasen til innlevering. Dette inkluderte alt fra research, utvikling, testing, og skriving. I gjennomsnitt jobbet jeg 20–30 timer per uke, men i de siste ukene før innlevering brukte jeg gjerne over 40 timer i uka for å få alt på plass
+        </p>
+
+
+        <div class="routine-container">
+          <h2>Daglig Rutine</h2>
+          <div class="routine-grid">
+            <div class="routine-block">
+              <div class="time-circle">07:00</div>
+              <p>Våkner opp og spiser frokost</p>
+            </div>
+            <div class="routine-block">
+              <div class="time-circle">08:00</div>
+              <p>Drar på forelesning/skole</p>
+            </div>
+            <div class="routine-block">
+              <div class="time-circle">17:00</div>
+              <p>Kommer fra skole, spiser mat og slapper av</p>
+            </div>
+            <div class="routine-block">
+              <div class="time-circle">21:00</div>
+              <p>Jobber mer med skole før han legger seg</p>
+            </div>
+          </div>
+        </div>
+        
+
+
+
+      
+        
+      <section class="textSection" id="fremtiden">
+        <div class="scrollText">
+            <h2>Fremtiden – Hva nå for Martin?</h2>
+            <p>
+                Martins reise har vært alt annet enn enkel. Fra en stille barndom til å bli en stemme for andre, står han nå ved et veiskille. 
+            </p>
+        </div>
+        <div class="dramatisktekst">
+            <p>
+                Hva blir det neste?
+            </p>
+        </div>
+        <div class="scrollText">
+            <p>
+                Når vi spør Martin om hva fremtiden bringer, svarer han med et smil – men også med alvor. Han vet at suksess krever planlegging, men også vilje til å ta risiko.
+            </p>
+        </div>
+        <div class="scrollText">
+            <h2>Hva er neste steg?</h2>
+            <p>
+                "Jeg vil bygge videre på alt jeg har lært," sier Martin. "Teknologi og ledelse har alltid vært min lidenskap, og jeg ser for meg en rolle der jeg kan kombinere disse interessene for å skape noe som virkelig betyr noe."
+            </p>
+        </div>
+        <div class="dramatisktekst">
+            <p>
+                For Martin handler det om mer enn ambisjoner. Det handler om
+            </p>
+        </div>
+        <div class="dramatisktekstgoodnews">
+            <p>
+                <strong>innflytelse.</strong>
+            </p>
+        </div>
+        <div class="scrollText">
+            <p>
+                Han ønsker å gjøre en forskjell, ikke bare for seg selv, men for kommende generasjoner av studenter og samfunnsbyggere. "Studentdemokratiet har vist meg hvor mye kraft som ligger i samarbeid, og jeg vil bruke den kraften til å gjøre utdanning bedre for alle."
+            </p>
+        </div>
+        <div class="scrollText">
+            <h2>Har han noen råd til andre?</h2>
+            <p>
+                "Ikke vær redd for å feile," sier Martin bestemt. "Det er i feilene vi lærer mest. Og husk, ingen kan forandre verden alene. Samarbeid, lytt, og vær modig nok til å ta sjanser."
+            </p>
+        </div>
+        <div class="dramatisktekstgoodnews">
+            <p>
+                Fremtiden tilhører de som tør.
+            </p>
+        </div>
+        <div class="scrollText">
+            <p>
+                Martins historie minner oss om at selv de mest usynlige kan skinne når de finner sin lidenskap og retning. Veien videre er kanskje ukjent, men én ting er klart: Martin er klar for å fortsette å inspirere.
+            </p>
+        </div>
+    </section>
+    
+  
+<main>
+
+
+
+        
+
+
+        
+
+      
+
+<footer>
+  <p>2024 Høgskolen I Østfold - NX News</p>
+</footer>
+      
+      <script src="scripts.js"></script>
+      <script>
+        // Skjuler knappen til toppen ved lasting av siden
+        window.onscroll = function() {scrollFunction()};
+      
+        function scrollFunction() {
+          const topButton = document.getElementById("topBtn");
+          if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            topButton.style.display = "block";
+          } else {
+            topButton.style.display = "none";
+          }
+        }
+      
+        function scrollToTop() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      </script>
+  
+  
+    </body>
+  
+  
+  
+  </html>
+  
