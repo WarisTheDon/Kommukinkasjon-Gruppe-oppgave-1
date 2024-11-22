@@ -310,7 +310,7 @@ header {
 }
 
 .scrollText {
-  margin: 50vh auto;
+  margin: 20vh auto;
   max-width: 50rem;
   padding: 1.2rem 1.8rem; /* Reduced padding for a cleaner look */
   background: rgba(255, 255, 255, 0.7); /* Light, frosted white background */
@@ -326,6 +326,8 @@ header {
   overflow: hidden;
   opacity: 95%; /* Full opacity to avoid heaviness */
   transition: all 0.3s ease; /* Smooth transition for any changes */
+ 
+  text-align: left;
   
 }
 
