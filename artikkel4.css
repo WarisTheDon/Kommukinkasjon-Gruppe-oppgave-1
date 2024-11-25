@@ -1363,7 +1363,7 @@ h2, p {
 
 .video-container {
   position: relative;
-  width: 300%; /* Responsivt */
+  width: 100%; /* Responsivt */
   max-width: 800px; /* Maks bredde */
   margin: 20px auto; /* Sentrert */
   overflow: hidden; /* Skjuler zoomede kanter */
