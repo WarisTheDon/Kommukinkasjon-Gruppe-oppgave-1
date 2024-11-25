@@ -252,6 +252,12 @@ body {
       
         #yashirarticle p {
           font-size: 16px; /* Smaller font size for paragraphs */
+          text-align: left; /* Unngå justify */
+          word-wrap: break-word; /* Bryt lange ord */
+          overflow-wrap: break-word; /* Ekstra støtte for eldre nettlesere */
+          letter-spacing: normal; /* Normal avstand mellom bokstaver */
+          word-spacing: normal; /* Normal avstand mellom ord */
+          hyphens: auto; /* Tillat bindestreker */
         }
       
   
