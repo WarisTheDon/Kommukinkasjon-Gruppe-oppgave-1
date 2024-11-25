@@ -1,273 +1,117 @@
+/* GLOBAL STYLES */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #000000;
-    overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* HEADER STYLES */
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('pictures/test.jpg');
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 20% 1rem;
+  animation: fadeIn 2s ease-out forwards; /* Smooth fade-in effect */
+  opacity: 0; /* Start hidden */
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+header .cta-button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: #48a7cc;
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+header .cta-button:hover {
+  background-color: #0270b0;
+  transform: scale(1.1);
+}
+
+/* ARTICLE STYLES */
+#yashirarticle {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 2rem auto;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#yashirarticle h2, #yashirarticle h3 {
+  color: #333;
+  text-align: center; /* Center titles */
+}
+
+#yashirarticle p {
+  text-align: left; /* Left-align paragraphs */
+  margin-bottom: 1rem;
+}
+
+.image-container {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.image-container img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+figcaption {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+/* FOOTER STYLES */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px); /* Start slightly above */
   }
-  
-  
-  
-  header {
-      width: 100vw;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-image: linear-gradient(
-          to bottom,
-          rgba(0, 0, 0, 0.5),
-          rgba(0, 0, 0, 0.5)
-        ),
-        url("pictures/test.jpg"); /*  Dette bildet ble laget med hjelp av DALL·E 3   */
-      background-size: cover;
-      background-position: center;
-      text-align: center;
-      position: relative; /* For positioning the pseudo-element */
-    }
-    
-    header::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background-image: linear-gradient(
-        120deg,
-        #02aab0 0%,
-        #00cdac 100%
-      ); /* Trendy gradient overlay */
-      opacity: 0.6; /* Overlay opacity for image visibility */
-      z-index: -1; /* Place the overlay behind the text */
-    }
-    
-    header h1 {
-      font-size: 3rem; /* Increased size for desktop */
-      color: #ffffff;
-      text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.8); /* More pronounced shadow for depth */
-      margin-bottom: 0.5rem; /* Space between title and button */
-      transform: translateY(-50px);
-      opacity: 0;
-      animation: slideIn 0.5s forwards 0.5s; /* Animation for the header title */
-    }
-    
-    header a {
-      background: #48a7cc; /* Matching the gradient for consistency */
-      color: #fff;
-      font-size: 1.5rem;
-      padding: 1rem 2rem;
-      text-decoration: none;
-      border-radius: 50px; /* Rounded corners for the button */
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Button shadow for depth */
-      transform: translateY(50px);
-      opacity: 0;
-      animation: slideIn 0.5s forwards 0.75s; /* Animation for the button */
-    }
-    
-    /* Subtle hover effect for button */
-    header a:hover {
-      background-image: linear-gradient(120deg, #0270b0 0%, #00a4cd 100%);
-      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
-    }
-    
-    /* Animation keyframes */
-    @keyframes slideIn {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  
-  
-  
+  to {
+    opacity: 1;
+    transform: translateY(0); /* End in normal position */
+  }
+}
+
+/* RESPONSIVE STYLES */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
   #yashirarticle {
-      padding: 40px;
-      max-width: 800px;
-      margin: 40px auto;
-      background-color: #f5f5f5; /* Lighter background */
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-      border-radius: 10px;
-      font-family: "Arial", sans-serif; /* Modern font */
-      line-height: 1.8;
-      color: #333; /* Darker text for better readability */
-    }
-    
-    #yashirarticle h2 {
-      color: rgb(218, 125, 4);
-      margin-top: 2em;
-    }
-    #yashirarticle h3 {
-      font-size: 3rem; /* Økt størrelse for desktop */
-      color: #000000; /* Endret til svart */
-      font-weight: bold; /* Setter teksten til fet */
-      text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.8); /* Mer uttalt skygge for dybde */
-      margin-bottom: 0.5rem; /* Avstand mellom tittel og knapp */
-      transform: translateY(-50px);
-      opacity: 0;
-      animation: slideIn 3.0s forwards 0.5s; /* Animasjon for overskriften */
-    }
-    
-    #yashirarticle:after {
-      background: #ebc06b;
-    }
-    
-    #yashirarticle p {
-      font-family: "Merriweather", sans-serif;
-      text-align: justify; /* Improved readability */
-      color: #555;
-      font-size: 19px;
-    }
-    
-    /* New image container and styling */
-    .right-align {
-      text-align: right; /* Flytter innholdet (bildet) til høyre */
-    }
-    
-    .right-align img {
-      display: inline-block; /* Sørger for at bildet følger tekstens flyt */
-    }
-    
-    
-    .image-container {
-      text-align: center; /* Center images */
-      margin: 20px 0; /* Spacing around images */
-    }
-  
-  
-    
-    @keyframes slideInFromRight {
-      0% {
-        transform: translateX(100%); /* Start utenfor skjermen til høyre */
-        opacity: 0; /* Gjør bildet usynlig */
-      }
-      100% {
-        transform: translateX(0); /* Sluttposisjon */
-        opacity: 1; /* Gjør bildet synlig */
-      }
-    }
-    
-    .yashar-image {
-      width: 100%;
-      max-width: 300px;
-      height: auto;
-      border: 2px solid #1aabe4;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-     
-    }
-  
-    
-  
-    .yashar-image:hover {
-      transform: scale(1.05); /* Slightly enlarge on hover */
-    }
-  
-    figcaption {
-      margin-left: 20px; /* Legger litt plass mellom bildet og teksten */
-      background-color: #f0f0f0; /* Lys grå bakgrunn */
-      padding: 10px; /* Litt padding for innholdet */
-      border-radius: 5px; /* Avrundede kanter */
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtil skygge for dybde */
+    padding: 1.5rem;
   }
-  
-    
-    .player-image {
-      width: 100%; /* Responsive width */
-      max-width: 600px; /* Maximum width */
-      height: auto; /* Maintain aspect ratio */
-      border: 3px solid #1aabe4; /* Border color matching headings */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
-      transition: transform 0.3s ease; /* Smooth transition for hover effect */
-    }
-    
-    .player-image:hover {
-      transform: scale(1.05); /* Slightly enlarge on hover */
-    }
-    
-  .chart-container {
-    width: 80%;
-    margin: 30px auto;
-    padding: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    background-color: white;
-    border-radius: 10px;
-  }
-  
-  h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #000000;
-  }
-  
-  canvas {
-      max-width: 800px; /* or any other suitable width */
-      height: 400px; /* or any other suitable height */
-      margin: 20px auto;
-  }
-  
-  footer {
-      clear: both;
-      text-align: center;
-      padding: 1rem 0;
-      background: #ffffff;
-      color: rgb(236, 213, 6);
-      width: 100%;
-      position: relative;
-    }
-  
-  
-  @media (max-width: 768px) {
-  
-      header {
-          width: 100%;
-      }
-  
-      header h1 {
-        font-size: 1.2rem;
-      }
-    
-      header a {
-        font-size: 0.8rem;
-      }
-    
-      
-      .scrollText {
-        font-size: 16px;
-        padding: 3px;
-        width: 90%;
-      }
-  
-  
-      #yashirarticle {
-          max-width: 100%;
-          padding: 20px; /* Reduce padding on smaller screens */
-          margin: 20px auto; /* Smaller margin */
-        }
-      
-        #yashirarticle h2 {
-          font-size: 20px; /* Smaller font size for headers */
-        }
-      
-        #yashirarticle p {
-          font-size: 16px; /* Smaller font size for paragraphs */
-          text-align: left; /* Unngå justify */
-          word-wrap: break-word; /* Bryt lange ord */
-          overflow-wrap: break-word; /* Ekstra støtte for eldre nettlesere */
-          letter-spacing: normal; /* Normal avstand mellom bokstaver */
-          word-spacing: normal; /* Normal avstand mellom ord */
-          hyphens: auto; /* Tillat bindestreker */
-        }
-      
-  
-        .textSection {
-          padding: 1px 10px;
-        }
-  
-        footer {
-          padding: 1rem;
-          width: 100%;
-          font-size: 16px;
-        }
-  }
+}
