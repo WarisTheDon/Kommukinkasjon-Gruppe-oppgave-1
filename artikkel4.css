@@ -1354,3 +1354,33 @@ h2, p {
   color: #555;
   line-height: 1.6;
 }
+
+
+
+
+
+
+
+.video-container {
+  position: relative;
+  width: 300%; /* Responsivt */
+  max-width: 800px; /* Maks bredde */
+  margin: 20px auto; /* Sentrert */
+  overflow: hidden; /* Skjuler zoomede kanter */
+}
+
+.epicvideo {
+  display: block;
+  width: 120%; /* 20% zoom */
+  height: auto; /* Holder proporsjonene */
+  object-fit: cover; /* Sørger for at video fyller container */
+  transform: translateX(-10%); /* Sentraliser zoomet video */
+  pointer-events: none; /* Ingen interaksjon */
+}
+
+/* Responsivt design */
+@media (max-width: 768px) {
+  .video-container {
+    width: 100%;
+  }
+}
